@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Briefcase, MapPin, Calendar, FileText, CheckCircle, GraduationCap, X } from "lucide-react";
+import { MapPin, Calendar, FileText, GraduationCap, X } from "lucide-react";
 
 export default function Experience() {
   const [selectedCert, setSelectedCert] = useState<string | null>(null);
@@ -30,16 +30,83 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Professional Roadmap Section */}
+        {/* Section 1: Startups */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-4">
           
-          {/* Left Column: Roadmap Title & Info */}
+          {/* Left Column: Title & Info */}
           <div className="lg:col-span-4 space-y-6">
             <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-              Professional Roadmap
+              Startups
             </h3>
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
-              Detailed overview of my engineering internships and roles within the industry.
+              Entrepreneurial ventures, system designs, and full-stack product architecture.
+            </p>
+            <div className="space-y-3 pt-2">
+              <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
+                <MapPin className="w-4 h-4 text-[#34D399]" />
+                <span>Delhi, India (Hybrid)</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
+                <Calendar className="w-4 h-4 text-[#34D399]" />
+                <span>Founder / Active</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Timeline */}
+          <div className="lg:col-span-8 relative border-l-2 border-slate-800 pl-8 ml-4 space-y-12">
+            
+            {/* Timeline Node - one IV */}
+            <div className="relative">
+              <div className="absolute -left-[41px] top-1.5 w-[18px] h-[18px] rounded-full bg-emerald-500 border-4 border-[#030712] shadow-lg" />
+              
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <p className="text-[10px] sm:text-xs font-bold font-mono text-slate-500 uppercase">
+                    March 2026 – Present
+                  </p>
+                  <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                    Founder
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-[#34D399] font-mono">
+                    one IV <span className="text-slate-600">•</span> Delhi, India (Hybrid)
+                  </p>
+                </div>
+
+                <div className="space-y-3 pl-1 text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p>Founded and lead one IV, coordinating full-stack digital product design, backend logic, and scalable deployments.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {["FOUNDER", "SYSTEMS ARCHITECTURE"].map((tag) => (
+                    <span 
+                      key={tag} 
+                      className="px-3 py-1 text-[9px] sm:text-[10px] font-bold font-mono text-[#34D399] bg-[#10b981]/5 border border-[#10b981]/25 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Section 2: Internships */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8 border-t border-slate-900">
+          
+          {/* Left Column: Title & Info */}
+          <div className="lg:col-span-4 space-y-6">
+            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+              Internships
+            </h3>
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+              Industry experience in technical environments, delivering production-grade code.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
@@ -48,7 +115,7 @@ export default function Experience() {
               </div>
               <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
                 <Calendar className="w-4 h-4 text-[#34D399]" />
-                <span>6+ Months Total Internship</span>
+                <span>6 Months Duration</span>
               </div>
             </div>
           </div>
@@ -56,11 +123,8 @@ export default function Experience() {
           {/* Right Column: Timeline */}
           <div className="lg:col-span-8 relative border-l-2 border-slate-800 pl-8 ml-4 space-y-12">
             
-            {/* Timeline Node */}
-            <div 
-              className="relative"
-            >
-              {/* Timeline Indicator Node */}
+            {/* Timeline Node - Rento India */}
+            <div className="relative">
               <div className="absolute -left-[41px] top-1.5 w-[18px] h-[18px] rounded-full bg-blue-500 border-4 border-[#030712] shadow-lg" />
               
               <div className="space-y-4">
@@ -71,8 +135,8 @@ export default function Experience() {
                   <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                     Application Developer Intern
                   </h4>
-                  <p className="text-xs sm:text-sm font-semibold text-emerald-400 font-mono">
-                    Rento India <span className="text-slate-600">•</span> Chennai, India
+                  <p className="text-xs sm:text-sm font-semibold text-[#34D399] font-mono">
+                    Rento India <span className="text-slate-600">•</span> Chennai, India (Hybrid)
                   </p>
                 </div>
 
@@ -87,7 +151,6 @@ export default function Experience() {
                   </div>
                 </div>
 
-                {/* Timeline Tags */}
                 <div className="flex flex-wrap gap-2 pt-2">
                   {["BACKEND DEVELOPMENT", "SPRING BOOT"].map((tag) => (
                     <span 
@@ -104,6 +167,158 @@ export default function Experience() {
 
           </div>
 
+        </div>
+
+        {/* Section 3: Clubs & Leadership */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8 border-t border-slate-900">
+          
+          {/* Left Column: Title & Info */}
+          <div className="lg:col-span-4 space-y-6">
+            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+              Clubs & Leadership
+            </h3>
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+              Leadership roles inside university groups, technical mentoring, and co-curricular projects.
+            </p>
+            <div className="space-y-3 pt-2">
+              <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
+                <MapPin className="w-4 h-4 text-[#34D399]" />
+                <span>Chennai, Tamil Nadu, India</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-400 text-xs font-mono">
+                <Calendar className="w-4 h-4 text-[#34D399]" />
+                <span>2 Years Active Experience</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Timeline */}
+          <div className="lg:col-span-8 relative border-l-2 border-slate-800 pl-8 ml-4 space-y-12">
+            
+            {/* Timeline Node 1: Newton School Coding Club SRMIST */}
+            <div className="relative">
+              <div className="absolute -left-[41px] top-1.5 w-[18px] h-[18px] rounded-full bg-emerald-500 border-4 border-[#030712] shadow-lg" />
+              
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <p className="text-[10px] sm:text-xs font-bold font-mono text-slate-500 uppercase">
+                    September 2025 – Present
+                  </p>
+                  <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                    Associate & Member
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-[#34D399] font-mono">
+                    Newton School Coding Club SRMIST <span className="text-slate-600">•</span> Chennai, India (Hybrid)
+                  </p>
+                </div>
+
+                <div className="space-y-3 pl-1 text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p><strong className="text-white">Associate (Jan 2026 – Present):</strong> Leading technical events, hosting hackathons, and driving core programming workshops.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p><strong className="text-white">Member (Sep 2025 – Present):</strong> Mentored student coders, organized mock coding rounds, and designed technical challenges.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {["LEADERSHIP", "COMMUNITY BUILDING", "PROGRAMMING"].map((tag) => (
+                    <span 
+                      key={tag} 
+                      className="px-3 py-1 text-[9px] sm:text-[10px] font-bold font-mono text-[#34D399] bg-[#10b981]/5 border border-[#10b981]/25 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline Node 2: Liftoff */}
+            <div className="relative">
+              <div className="absolute -left-[41px] top-1.5 w-[18px] h-[18px] rounded-full bg-emerald-500 border-4 border-[#030712] shadow-lg" />
+              
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <p className="text-[10px] sm:text-xs font-bold font-mono text-slate-500 uppercase">
+                    September 2024 – September 2025
+                  </p>
+                  <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                    Devtrack Head & Tech Associate
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-[#34D399] font-mono">
+                    Liftoff <span className="text-slate-600">•</span> Chennai, India (Hybrid)
+                  </p>
+                </div>
+
+                <div className="space-y-3 pl-1 text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p><strong className="text-white">Devtrack Head (Feb 2025 – Sep 2025):</strong> Managed full-stack web platforms and backend services using Express.js.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p><strong className="text-white">Tech Associate (Sep 2024 – Feb 2025):</strong> Developed core frontend elements using HTML5, CSS3, and JavaScript.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {["EXPRESS.JS", "FULL-STACK DEVELOPMENT", "API DESIGN"].map((tag) => (
+                    <span 
+                      key={tag} 
+                      className="px-3 py-1 text-[9px] sm:text-[10px] font-bold font-mono text-[#34D399] bg-[#10b981]/5 border border-[#10b981]/25 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline Node 3: Directorate of Student Affairs (DSA) */}
+            <div className="relative">
+              <div className="absolute -left-[41px] top-1.5 w-[18px] h-[18px] rounded-full bg-emerald-500 border-4 border-[#030712] shadow-lg" />
+              
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <p className="text-[10px] sm:text-xs font-bold font-mono text-slate-500 uppercase">
+                    September 2024 – July 2025
+                  </p>
+                  <h4 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                    Committee Member & Volunteer
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-[#34D399] font-mono">
+                    Directorate of Student Affairs, SRMIST (DSA) <span className="text-slate-600">•</span> Chennai, India (On-site)
+                  </p>
+                </div>
+
+                <div className="space-y-3 pl-1 text-slate-400 text-xs sm:text-sm font-light leading-relaxed">
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p><strong className="text-white">Committee Member (Apr 2025 – Jul 2025):</strong> Coordinated and managed university student campaigns and co-curricular initiatives.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 select-none">▪</span>
+                    <p><strong className="text-white">Volunteer (Sep 2024 – Apr 2025):</strong> Assisted in community drives, student events planning, and volunteer schedules.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {["EVENT MANAGEMENT", "VOLUNTEERISM", "COMMUNICATIONS"].map((tag) => (
+                    <span 
+                      key={tag} 
+                      className="px-3 py-1 text-[9px] sm:text-[10px] font-bold font-mono text-[#34D399] bg-[#10b981]/5 border border-[#10b981]/25 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         {/* Verified Credentials Sub-section */}
@@ -229,7 +444,7 @@ export default function Experience() {
 
                 <div className="space-y-1.5 border-t border-white/5 pt-4">
                   <p className="text-slate-600 font-bold uppercase tracking-wider text-[10px]">
-                    // Key focus:
+                    {"// Key focus:"}
                   </p>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-300">
                     <div className="flex items-center gap-1.5">
