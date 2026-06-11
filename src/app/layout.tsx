@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Montserrat, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"; // ← adjust path if your Navbar is somewhere else
+import ScrollToTop from "@/components/ScrollToTop";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,6 +35,9 @@ export default function RootLayout({
 
         {/* Main content */}
         <main>{children}</main>
+
+        {/* Scroll To Top Button */}
+        <ScrollToTop />
       </body>
     </html>
   );
