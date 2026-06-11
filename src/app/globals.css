@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+}
+
 /* Smooth text */
 * {
   -webkit-font-smoothing: antialiased;
@@ -28,4 +32,12 @@ button::after {
 
 .animate-page-open {
   animation: pageOpen 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.glow-text-green {
+  text-shadow: 0 0 6px rgba(52, 211, 153, 0.25);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 6px rgba(96, 165, 250, 0.25);
 }

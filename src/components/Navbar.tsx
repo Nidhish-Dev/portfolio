@@ -36,9 +36,10 @@ export default function Navbar() {
           {/* Logo (Left) */}
           <Link
             href="/"
-            className="text-xs sm:text-sm font-black tracking-widest text-white hover:opacity-80 transition-opacity uppercase font-mono"
+            className="text-xs sm:text-sm font-black tracking-widest text-white hover:opacity-80 transition-opacity uppercase font-mono flex items-center gap-1.5"
           >
-            Nidhish Rathore
+            <span>Nidhish Rathore</span>
+            <span className="px-1.5 py-0.5 bg-[#10b981]/10 border border-[#10b981]/20 rounded text-[8px] font-bold text-[#34d399] tracking-normal normal-case select-none">v1.2.9</span>
           </Link>
 
           {/* Desktop Nav Links (Center) */}

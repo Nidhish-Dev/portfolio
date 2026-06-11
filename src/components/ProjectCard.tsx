@@ -88,8 +88,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <div className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]/80" />
                 <div className="w-2.5 h-2.5 rounded-full bg-[#10b981]/80" />
               </div>
-              <span className="text-slate-500 text-[10px]">
-                {project.id === "oneiv" ? "oneiv_console.sh" : project.id === "jivaroots" ? "jivaroots_terminal.sh" : "dini_terminal.sh"}
+              <span className="text-slate-500 text-[10px] flex items-center gap-2 select-none">
+                <span>{project.id === "oneiv" ? "oneiv_console.sh" : project.id === "jivaroots" ? "jivaroots_terminal.sh" : "dini_terminal.sh"}</span>
+                <span className="hidden sm:inline-block px-1 py-0.5 bg-slate-950/60 border border-white/5 rounded text-[8px] text-slate-600 font-normal">git:main@{project.id === "oneiv" ? "b92b2c6" : project.id === "jivaroots" ? "f8e7d2c" : "d9c8b7a"}</span>
               </span>
             </div>
 
