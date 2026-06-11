@@ -8,7 +8,7 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div className="bg-[#030712] text-slate-100 min-h-screen font-sans overflow-hidden animate-page-open">
+    <div className="bg-[#030712] text-slate-100 min-h-screen font-sans overflow-x-hidden animate-page-open">
       
       {/* 1. Hero & AWS Certification Banners (Imported from Hero.tsx) */}
       <Hero />
@@ -16,7 +16,7 @@ export default function Home() {
       {/* 2. Selected Works Preview */}
       <section className="relative py-24 border-t border-white/5 bg-[#030712]">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/5 blur-[100px]" />
+          <div className="hidden md:block absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/5 blur-[100px]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full space-y-16">
@@ -198,7 +198,7 @@ export default function Home() {
       {/* 3. Tools for the Trade (Matches Image 3 layout, populated with About page combination) */}
       <section className="relative py-24 border-t border-white/5 bg-[#030712]">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-500/5 blur-[120px]" />
+          <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-500/5 blur-[120px]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full space-y-16">

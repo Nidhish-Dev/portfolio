@@ -11,8 +11,8 @@ export default function Experience() {
     <section id="experience" className="relative min-h-screen py-24 bg-[#030712] text-slate-100 font-sans border-t border-white/5 animate-page-open">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
-        <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/5 blur-[100px]" />
+        <div className="hidden md:block absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
+        <div className="hidden md:block absolute bottom-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/5 blur-[100px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full space-y-20">

@@ -14,11 +14,11 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="relative min-h-screen py-24 bg-[#030712] text-slate-100 font-sans border-t border-white/5 overflow-hidden animate-page-open">
+    <section id="about" className="relative min-h-screen py-24 bg-[#030712] text-slate-100 font-sans border-t border-white/5 overflow-x-hidden animate-page-open">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] rounded-full bg-blue-500/5 blur-[120px]" />
-        <div className="absolute top-10 left-10 w-[400px] h-[400px] rounded-full bg-indigo-500/5 blur-[100px]" />
+        <div className="hidden md:block absolute bottom-10 right-10 w-[500px] h-[500px] rounded-full bg-blue-500/5 blur-[120px]" />
+        <div className="hidden md:block absolute top-10 left-10 w-[400px] h-[400px] rounded-full bg-indigo-500/5 blur-[100px]" />
       </div>
 
       {/* Main Grid containing Vertical Text & Content */}

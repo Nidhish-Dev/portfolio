@@ -60,7 +60,7 @@ export default function Work() {
     <section id="projects" className="relative min-h-screen py-24 bg-[#030712] text-slate-100 font-sans border-t border-white/5 animate-page-open">
       {/* Background radial glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-500/5 blur-[120px]" />
+        <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-500/5 blur-[120px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full space-y-16">
