@@ -91,40 +91,41 @@ export default function Navbar() {
       </nav>
 
       {/* Full-Screen Mobile Drawer */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40 bg-[#060b18]/98 flex flex-col justify-center px-8">
-          <div className="flex flex-col items-center gap-8 text-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`text-3xl font-extrabold tracking-tight transition-colors duration-300
-                  ${activeHref === item.href ? "text-white" : "text-slate-500 hover:text-white"}`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            
-            <div className="flex items-center gap-6 mt-8">
-              <button 
-                className="p-3 text-slate-400 hover:text-white rounded-full bg-white/5 transition"
-                aria-label="Toggle layout view"
-              >
-                <Monitor className="w-5 h-5" />
-              </button>
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold tracking-wider rounded-full shadow-lg hover:shadow-blue-500/20 transition-all uppercase"
-              >
-                Resume
-              </a>
-            </div>
+      <div 
+        className={`fixed inset-0 z-40 bg-[#060b18]/98 flex flex-col justify-center px-8 transition-all duration-300 ease-in-out
+          ${isOpen ? "opacity-100 translate-y-0 visible pointer-events-auto" : "opacity-0 -translate-y-4 invisible pointer-events-none"}`}
+      >
+        <div className="flex flex-col items-center gap-8 text-center">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className={`text-3xl font-extrabold tracking-tight transition-colors duration-300
+                ${activeHref === item.href ? "text-white" : "text-slate-500 hover:text-white"}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+          
+          <div className="flex items-center gap-6 mt-8">
+            <button 
+              className="p-3 text-slate-400 hover:text-white rounded-full bg-white/5 transition"
+              aria-label="Toggle layout view"
+            >
+              <Monitor className="w-5 h-5" />
+            </button>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold tracking-wider rounded-full shadow-lg hover:shadow-blue-500/20 transition-all uppercase"
+            >
+              Resume
+            </a>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }
