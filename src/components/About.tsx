@@ -232,7 +232,7 @@ export default function About() {
                     <span className="text-[#34D399]">➜</span>
                     <span className="text-slate-300 font-semibold">whoami</span>
                   </div>
-                  <div className="text-slate-400 pl-4">Nidhish Rathore // Full Stack Architect</div>
+                  <div className="text-slate-400 pl-4">Nidhish Rathore // Software Engineer</div>
                 </div>
 
                 <div className="space-y-0.5">
